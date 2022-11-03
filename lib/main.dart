@@ -24,32 +24,10 @@ class MyApp extends StatelessWidget {
             image: AssetImage("assets/images/logoT.png"),
             width: 300,
           ),
-          duration: 3000,
+          duration: 3500,
           splashTransition: SplashTransition.scaleTransition,
           backgroundColor: Color(0xFF141518),
           nextScreen: MyStatefulWidget(title: 'Jeremi')),
-      //  Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       Container(
-      //         height: 100,
-      //         width: 100,
-      //         //backgroundColor: Color(0xFF141518)
-      //         color: Colors.blue,
-      //       ),
-      //       Container(
-      //         child: Text(
-      //           'Splash Screen',
-      //           style: TextStyle(
-      //             fontSize: 24,
-      //             fontWeight: FontWeight.bold,
-      //           ),
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }
