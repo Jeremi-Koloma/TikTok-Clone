@@ -4,25 +4,8 @@ import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:math' as math;
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter TikTok',
-      debugShowCheckedModeBanner: false,
-      home: MyStatefulWidget(),
-    );
-  }
-}
-
 class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({super.key});
+  const MyStatefulWidget({super.key, required String title});
 
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
