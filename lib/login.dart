@@ -19,7 +19,10 @@ class Login extends StatelessWidget {
           centerTitle: true,
           title: const Text(
             'Profil',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           actions: [
             IconButton(
@@ -37,7 +40,7 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Icon(
-                Icons.person_outline,
+                FontAwesomeIcons.user,
                 color: Colors.grey,
                 size: 100.0,
               ),
@@ -84,228 +87,299 @@ void _openPopup(context) {
   showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       builder: (BuildContext bc) {
+        var media = MediaQuery.of(context).size.height;
         return Container(
+          // mon Popup raduis
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+          ),
           height: MediaQuery.of(context).size.height * .90,
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Center(
+                  child: Column(
                     children: <Widget>[
-                      GestureDetector(
-                        onTap: () => Navigator.pop(context),
-                        child: const Icon(
-                          Icons.close,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: const Icon(
+                              Icons.close,
+                            ),
+                          ),
+                          const Icon(
+                            FontAwesomeIcons.circleQuestion,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 50.0,
+                      ),
+                      const Text(
+                        'Sign up for TikTok',
+                        style: TextStyle(
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const Icon(
-                        Icons.more,
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      const Text(
+                        'Create a profile, follow other accoounts, make your own wideos, and more.',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.black54,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      ButtonTheme(
+                        minWidth: 250.0,
+                        child: ElevatedButton(
+                            onPressed: () => {},
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.0,
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.grey,
+                                  width: 0.5,
+                                ),
+                              ),
+                              primary: Colors.white,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: const <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: FaIcon(
+                                      FontAwesomeIcons.user,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Text(
+                                      'Use phone or email',
+                                      style: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      ButtonTheme(
+                        minWidth: 250.0,
+                        child: ElevatedButton(
+                            onPressed: () => {},
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.0,
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.grey,
+                                  width: 0.5,
+                                ),
+                              ),
+                              primary: Colors.white,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: const <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: FaIcon(
+                                      FontAwesomeIcons.facebook,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Text(
+                                      'Continue with Facebook',
+                                      style: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      ButtonTheme(
+                        minWidth: 250.0,
+                        child: ElevatedButton(
+                            onPressed: () => {},
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.0,
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.grey,
+                                  width: 0.5,
+                                ),
+                              ),
+                              primary: Colors.white,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: const <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: FaIcon(
+                                      FontAwesomeIcons.apple,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Text(
+                                      'Continue with Apple',
+                                      style: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      ButtonTheme(
+                        minWidth: 250.0,
+                        child: ElevatedButton(
+                            onPressed: () => {},
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0.0,
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.grey,
+                                  width: 0.5,
+                                ),
+                              ),
+                              primary: Colors.white,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: const <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: FaIcon(
+                                      FontAwesomeIcons.google,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Text(
+                                      'Continue with Google',
+                                      style: TextStyle(
+                                        fontSize: 15.0,
+                                        color: Colors.black87,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                      ),
+                      SizedBox(
+                        height: media * .20,
+                      ),
+                      const Text(
+                        'By continuing, you agree to our Termes of Service and acknowledge that you have read our Privacy Policy to learn how we collect, use, and share your data.',
+                        style: TextStyle(
+                          fontSize: 13.0,
+                          color: Colors.black54,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        height: 16.0,
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 50.0,
-                  ),
-                  const Text(
-                    'Sign up for TikTok',
-                    style: TextStyle(fontSize: 25.0),
-                  ),
-                  const SizedBox(
-                    height: 10.0,
-                  ),
-                  const Text(
-                    'Create a profile, follow other accoounts, make your own wideos, and more.',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: Colors.black54,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  ButtonTheme(
-                    minWidth: 250.0,
-                    child: ElevatedButton(
-                        onPressed: () => {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          shape: const RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Colors.grey,
-                              width: 0.5,
-                            ),
-                          ),
-                          primary: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: const <Widget>[
-                              Expanded(
-                                flex: 1,
-                                child: FaIcon(
-                                  FontAwesomeIcons.user,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'Use phone or email',
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 15.0,
-                  ),
-                  ButtonTheme(
-                    minWidth: 250.0,
-                    child: ElevatedButton(
-                        onPressed: () => {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          shape: const RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Colors.grey,
-                              width: 0.5,
-                            ),
-                          ),
-                          primary: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: const <Widget>[
-                              Expanded(
-                                flex: 1,
-                                child: FaIcon(
-                                  FontAwesomeIcons.facebook,
-                                  color: Colors.blue,
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'Continue with Facebook',
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 15.0,
-                  ),
-                  ButtonTheme(
-                    minWidth: 250.0,
-                    child: ElevatedButton(
-                        onPressed: () => {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          shape: const RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Colors.grey,
-                              width: 0.5,
-                            ),
-                          ),
-                          primary: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: const <Widget>[
-                              Expanded(
-                                flex: 1,
-                                child: FaIcon(
-                                  FontAwesomeIcons.apple,
-                                  color: Colors.black,
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'Continue with Apple',
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 15.0,
-                  ),
-                  ButtonTheme(
-                    minWidth: 250.0,
-                    child: ElevatedButton(
-                        onPressed: () => {},
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
-                          shape: const RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Colors.grey,
-                              width: 0.5,
-                            ),
-                          ),
-                          primary: Colors.white,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: const <Widget>[
-                              Expanded(
-                                flex: 1,
-                                child: FaIcon(
-                                  FontAwesomeIcons.google,
-                                  color: Colors.red,
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Text(
-                                  'Continue with Google',
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black87,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        )),
-                  ),
-                ],
+                ),
               ),
-            ),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  color: const Color.fromARGB(255, 233, 232, 229),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Text(
+                          'Already have an account ? ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          FontAwesomeIcons.rightToBracket,
+                          size: 20,
+                          color: Color.fromARGB(255, 37, 37, 37),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          'Log in',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-          
+          // decoration: BoxDecoration(
+          //   color: Colors.amber,
+          //   borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+          // ),
         );
       });
 }
