@@ -8,36 +8,49 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'TikTok',
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text(
-            'Profile',
+          centerTitle: true,
+          title: const Text(
+            'Profil',
+            style: TextStyle(color: Colors.black),
           ),
+          actions: [
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.more_vert,
+                  color: Colors.black,
+                ))
+          ],
+          elevation: 0,
           backgroundColor: Colors.white,
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(
+              const Icon(
                 Icons.person_outline,
                 color: Colors.grey,
                 size: 100.0,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
-              Text(
+              const Text(
                 'Connectez-vous sur à votre Compte',
                 style: TextStyle(
                   color: Colors.black87,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
               SizedBox(
@@ -52,11 +65,11 @@ class Login extends StatelessWidget {
                       Colors.red[400],
                     )),
                     // textColor:Colors.white,
-                    child: Text('Sign up'),
+                    child: const Text("S'inscrire"),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
             ],
@@ -85,26 +98,26 @@ void _openPopup(context) {
                     children: <Widget>[
                       GestureDetector(
                         onTap: () => Navigator.pop(context),
-                        child: Icon(
+                        child: const Icon(
                           Icons.close,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.more,
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50.0,
                   ),
-                  Text(
+                  const Text(
                     'Sign up for TikTok',
                     style: TextStyle(fontSize: 25.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
-                  Text(
+                  const Text(
                     'Create a profile, follow other accoounts, make your own wideos, and more.',
                     style: TextStyle(
                       fontSize: 16.0,
@@ -112,7 +125,7 @@ void _openPopup(context) {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20.0,
                   ),
                   ButtonTheme(
@@ -121,7 +134,7 @@ void _openPopup(context) {
                         onPressed: () => {},
                         style: ElevatedButton.styleFrom(
                           elevation: 0.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             side: BorderSide(
                               color: Colors.grey,
                               width: 0.5,
@@ -134,11 +147,12 @@ void _openPopup(context) {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
+                            children: const <Widget>[
                               Expanded(
                                 flex: 1,
                                 child: FaIcon(
                                   FontAwesomeIcons.user,
+                                  color: Colors.black,
                                 ),
                               ),
                               Expanded(
@@ -155,7 +169,7 @@ void _openPopup(context) {
                           ),
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   ButtonTheme(
@@ -164,7 +178,7 @@ void _openPopup(context) {
                         onPressed: () => {},
                         style: ElevatedButton.styleFrom(
                           elevation: 0.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             side: BorderSide(
                               color: Colors.grey,
                               width: 0.5,
@@ -177,7 +191,7 @@ void _openPopup(context) {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
+                            children: const <Widget>[
                               Expanded(
                                 flex: 1,
                                 child: FaIcon(
@@ -199,7 +213,7 @@ void _openPopup(context) {
                           ),
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   ButtonTheme(
@@ -208,7 +222,7 @@ void _openPopup(context) {
                         onPressed: () => {},
                         style: ElevatedButton.styleFrom(
                           elevation: 0.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             side: BorderSide(
                               color: Colors.grey,
                               width: 0.5,
@@ -221,11 +235,12 @@ void _openPopup(context) {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
+                            children: const <Widget>[
                               Expanded(
                                 flex: 1,
                                 child: FaIcon(
                                   FontAwesomeIcons.apple,
+                                  color: Colors.black,
                                 ),
                               ),
                               Expanded(
@@ -242,7 +257,7 @@ void _openPopup(context) {
                           ),
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15.0,
                   ),
                   ButtonTheme(
@@ -251,7 +266,7 @@ void _openPopup(context) {
                         onPressed: () => {},
                         style: ElevatedButton.styleFrom(
                           elevation: 0.0,
-                          shape: RoundedRectangleBorder(
+                          shape: const RoundedRectangleBorder(
                             side: BorderSide(
                               color: Colors.grey,
                               width: 0.5,
@@ -264,7 +279,7 @@ void _openPopup(context) {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
+                            children: const <Widget>[
                               Expanded(
                                 flex: 1,
                                 child: FaIcon(
@@ -290,6 +305,7 @@ void _openPopup(context) {
               ),
             ),
           ),
+          
         );
       });
 }

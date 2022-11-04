@@ -44,11 +44,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       body: HomePage(),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
           ),
@@ -59,11 +59,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
             label: '',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.comment_outlined),
             label: 'Comment',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             label: 'Profil',
           ),
@@ -212,21 +212,21 @@ class PostContent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         '@kolomajeremi_98',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 10),
-                      Text(
+                      const SizedBox(height: 10),
+                      const Text(
                         'Je suis un commentaire Je suis un commentaire  Je suis un commentaire  Je suis un commentaire ',
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         children: const [
                           Icon(
@@ -301,7 +301,7 @@ class PostContent extends StatelessWidget {
                               size: 45,
                             ),
                           ),
-                          Text(
+                          const Text(
                             '25.OK',
                             style: TextStyle(
                               color: Colors.white,
@@ -330,7 +330,7 @@ class PostContent extends StatelessWidget {
                               size: 45,
                             ),
                           ),
-                          Text(
+                          const Text(
                             '156',
                             style: TextStyle(
                               color: Colors.white,
@@ -359,7 +359,7 @@ class PostContent extends StatelessWidget {
                               size: 45,
                             ),
                           ),
-                          Text(
+                          const Text(
                             '156',
                             style: TextStyle(
                               color: Colors.white,
@@ -388,7 +388,7 @@ class PostContent extends StatelessWidget {
                               size: 45,
                             ),
                           ),
-                          Text(
+                          const Text(
                             '244',
                             style: TextStyle(
                               color: Colors.white,

@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(Duration(milliseconds: 1500), () {});
+    await Future.delayed(const Duration(milliseconds: 1500), () {});
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -39,7 +39,7 @@ class _SplashState extends State<Splash> {
               color: Colors.blue,
             ),
             Container(
-              child: Text(
+              child: const Text(
                 'Splash Screen',
                 style: TextStyle(
                   fontSize: 24,

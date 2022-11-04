@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter TikTok',
       debugShowCheckedModeBanner: false,
       home: AnimatedSplashScreen(
-          splash: Image(
+          splash: const Image(
             image: AssetImage("assets/images/logoT.png"),
             width: 300,
           ),
           duration: 3500,
           splashTransition: SplashTransition.scaleTransition,
-          backgroundColor: Color(0xFF141518),
-          nextScreen: MyStatefulWidget(title: 'Jeremi')),
+          backgroundColor: const Color(0xFF141518),
+          nextScreen: const MyStatefulWidget(title: 'Jeremi')),
     );
   }
 }
