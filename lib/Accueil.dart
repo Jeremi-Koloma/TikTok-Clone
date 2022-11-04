@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok/login.dart';
 import 'package:video_player/video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:math' as math;
@@ -172,10 +173,15 @@ class PostContent extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
+              Icon(
+                Icons.live_tv,
+                color: Colors.white,
+              ),
+              SizedBox(width: 20),
               Text(
                 'Following',
                 style: TextStyle(
-                  color: Colors.white54,
+                  color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -183,9 +189,14 @@ class PostContent extends StatelessWidget {
               Text(
                 'For you',
                 style: TextStyle(
-                  color: Colors.white54,
+                  color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
+              ),
+              SizedBox(width: 20),
+              Icon(
+                Icons.search,
+                color: Colors.white,
               ),
             ],
           ),
@@ -277,10 +288,18 @@ class PostContent extends StatelessWidget {
                       //color: Colors.teal,
                       child: Column(
                         children: [
-                          Icon(
-                            Icons.favorite,
-                            color: Colors.white.withOpacity(0.85),
-                            size: 45,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Login()));
+                            },
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.white.withOpacity(0.85),
+                              size: 45,
+                            ),
                           ),
                           Text(
                             '25.OK',
@@ -298,10 +317,18 @@ class PostContent extends StatelessWidget {
                       //color: Colors.yellow,
                       child: Column(
                         children: [
-                          Icon(
-                            Icons.pending,
-                            color: Colors.white.withOpacity(0.85),
-                            size: 45,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Login()));
+                            },
+                            child: Icon(
+                              Icons.pending,
+                              color: Colors.white.withOpacity(0.85),
+                              size: 45,
+                            ),
                           ),
                           Text(
                             '156',
@@ -319,10 +346,18 @@ class PostContent extends StatelessWidget {
                       //color: Colors.yellow,
                       child: Column(
                         children: [
-                          Icon(
-                            Icons.bookmark,
-                            color: Colors.white.withOpacity(0.85),
-                            size: 45,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Login()));
+                            },
+                            child: Icon(
+                              Icons.bookmark,
+                              color: Colors.white.withOpacity(0.85),
+                              size: 45,
+                            ),
                           ),
                           Text(
                             '156',
@@ -340,10 +375,18 @@ class PostContent extends StatelessWidget {
                       //color: Colors.orange,
                       child: Column(
                         children: [
-                          Icon(
-                            FontAwesomeIcons.share,
-                            color: Colors.white.withOpacity(0.85),
-                            size: 45,
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Login()));
+                            },
+                            child: Icon(
+                              FontAwesomeIcons.share,
+                              color: Colors.white.withOpacity(0.85),
+                              size: 45,
+                            ),
                           ),
                           Text(
                             '244',

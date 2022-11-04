@@ -36,7 +36,6 @@ class _SplashState extends State<Splash> {
             Container(
               height: 100,
               width: 100,
-              //backgroundColor: Color(0xFF141518)
               color: Colors.blue,
             ),
             Container(
