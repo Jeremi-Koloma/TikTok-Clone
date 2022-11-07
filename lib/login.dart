@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok/main.dart';
 
+// import 'Views/screens/firstpage_tiktok.dart';
 import 'Views/screens/login_screen.dart';
 
 class Login extends StatelessWidget {
@@ -173,6 +174,7 @@ void _openPopup(context) {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
                                   return LoginScreen();
+                                  // return FirstPageTiktok();
                                 }));
                               },
                               child: Padding(
