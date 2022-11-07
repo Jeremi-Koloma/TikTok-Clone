@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok/Views/screens/secondpage_tiktok.dart';
 import 'package:tiktok/main.dart';
 
 // import 'Views/screens/firstpage_tiktok.dart';
@@ -173,8 +174,9 @@ void _openPopup(context) {
                               onPressed: () {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                  return LoginScreen();
+                                  // return LoginScreen();
                                   // return FirstPageTiktok();
+                                  return const SecondPageTiktok();
                                 }));
                               },
                               child: Padding(
