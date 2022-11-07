@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tiktok/main.dart';
 
+import 'login_screen.dart';
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -163,6 +165,23 @@ void _openPopup(context) {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.min,
                                 children: const <Widget>[
+                                  // InkWell(
+                                  //   onTap: () {
+                                  //     Navigator.push(
+                                  //         context,
+                                  //         MaterialPageRoute(
+                                  //             builder: (context) =>
+                                  //                 LoginScreen()));
+                                  //   },
+                                  //   child: const Expanded(
+                                  //     flex: 1,
+                                  //     child: FaIcon(
+                                  //       FontAwesomeIcons.user,
+                                  //       color: Colors.black,
+                                  //     ),
+                                  //   ),
+                                  // ),
+
                                   Expanded(
                                     flex: 1,
                                     child: FaIcon(
