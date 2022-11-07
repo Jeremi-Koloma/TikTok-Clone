@@ -59,7 +59,8 @@ class Login extends StatelessWidget {
                 height: 15.0,
               ),
               SizedBox(
-                width: 200.0,
+                width: 250.0,
+                height: 50,
                 child: Builder(
                   builder: (context) => ElevatedButton(
                     onPressed: () {
@@ -67,10 +68,17 @@ class Login extends StatelessWidget {
                     },
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                      Colors.red[400],
+                      Color.fromARGB(255, 248, 63, 63),
                     )),
                     // textColor:Colors.white,
-                    child: const Text("S'inscrire"),
+                    child: const Text(
+                      "S'inscrire",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -148,60 +156,55 @@ void _openPopup(context) {
                       ButtonTheme(
                         minWidth: 250.0,
                         child: ElevatedButton(
-                            onPressed: () => {},
-                            style: ElevatedButton.styleFrom(
-                              elevation: 0.0,
-                              shape: const RoundedRectangleBorder(
-                                side: BorderSide(
-                                  color: Colors.grey,
-                                  width: 0.5,
-                                ),
+                          onPressed: () => {},
+                          style: ElevatedButton.styleFrom(
+                            elevation: 0.0,
+                            shape: const RoundedRectangleBorder(
+                              side: BorderSide(
+                                color: Colors.grey,
+                                width: 0.5,
                               ),
-                              primary: Colors.white,
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  LoginScreen()));
-                                    },
-                                    child: const Expanded(
+                            primary: const Color.fromARGB(255, 248, 63, 63),
+                          ),
+                          child: Container(
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return LoginScreen();
+                                }));
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: const <Widget>[
+                                    Expanded(
                                       flex: 1,
                                       child: FaIcon(
                                         FontAwesomeIcons.user,
-                                        color: Colors.black,
+                                        color: Colors.white,
                                       ),
                                     ),
-                                  ),
-
-                                  // Expanded(
-                                  //   flex: 1,
-                                  //   child: FaIcon(
-                                  //     FontAwesomeIcons.user,
-                                  //     color: Colors.black,
-                                  //   ),
-                                  // ),
-                                  Expanded(
-                                    flex: 2,
-                                    child: Text(
-                                      'Use phone or email',
-                                      style: TextStyle(
-                                        fontSize: 15.0,
-                                        color: Colors.black87,
+                                    Expanded(
+                                      flex: 2,
+                                      child: Text(
+                                        'Use phone or email',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            )),
+                            ),
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 15.0,
@@ -274,7 +277,7 @@ void _openPopup(context) {
                                     flex: 1,
                                     child: FaIcon(
                                       FontAwesomeIcons.apple,
-                                      color: Colors.black,
+                                      color: Color.fromARGB(192, 14, 13, 13),
                                     ),
                                   ),
                                   Expanded(
@@ -395,10 +398,6 @@ void _openPopup(context) {
               ),
             ],
           ),
-          // decoration: BoxDecoration(
-          //   color: Colors.amber,
-          //   borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-          // ),
         );
       });
 }
