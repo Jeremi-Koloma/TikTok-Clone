@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Future.delayed(const Duration(seconds: 5)).then((value) {
       Navigator.of(context).pushReplacement(CupertinoPageRoute(
-          builder: (_) => const MyStatefulWidget(
+          builder: (context) => const MyStatefulWidget(
                 title: 'TikTok ODC',
               )));
     });

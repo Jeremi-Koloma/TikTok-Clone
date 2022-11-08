@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok/Views/screens/thirstpage_tiktok.dart';
 
 class SecondPageTiktok extends StatelessWidget {
   const SecondPageTiktok({super.key});
@@ -251,7 +253,10 @@ d'intérêt
                       backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.grey, width: 1),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(CupertinoPageRoute(
+                          builder: (context) => const ThirstPageTiktok()));
+                    },
                     child: const Text(
                       'Ignorer',
                       style: TextStyle(
@@ -265,7 +270,10 @@ d'intérêt
                     width: 13,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(CupertinoPageRoute(
+                          builder: (context) => const ThirstPageTiktok()));
+                    },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(150, 50),
                       backgroundColor: const Color.fromARGB(88, 228, 222, 222)

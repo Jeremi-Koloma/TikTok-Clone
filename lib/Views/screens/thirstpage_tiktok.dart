@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok/splash.dart';
 
 class ThirstPageTiktok extends StatelessWidget {
   const ThirstPageTiktok({super.key});
@@ -53,7 +55,10 @@ aimes et partages
                 minimumSize: const Size(350.0, 55),
                 backgroundColor: Colors.red,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(CupertinoPageRoute(
+                    builder: (context) => const SplashScreen()));
+              },
               child: const Text(
                 'Commencer à regarder',
                 style: TextStyle(

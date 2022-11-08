@@ -1,7 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok/Views/screens/secondpage_tiktok.dart';
 
-class FirstPageTiktok extends StatelessWidget {
+class FirstPageTiktok extends StatefulWidget {
   const FirstPageTiktok({super.key});
+
+  @override
+  State<FirstPageTiktok> createState() => _FirstPageTiktokState();
+}
+
+class _FirstPageTiktokState extends State<FirstPageTiktok> {
+  @override
+  void initState() {
+    super.initState();
+
+    Future.delayed(const Duration(seconds: 5)).then((value) {
+      Navigator.of(context).pushReplacement(
+          CupertinoPageRoute(builder: (context) => const SecondPageTiktok()));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:tiktok/Views/screens/secondpage_tiktok.dart';
-import 'package:tiktok/Views/screens/thirstpage_tiktok.dart';
-import 'package:tiktok/main.dart';
-import 'package:tiktok/splash.dart';
-
-// import 'Views/screens/firstpage_tiktok.dart';
 import 'Views/screens/login_screen.dart';
 
 class Login extends StatelessWidget {
@@ -176,11 +170,7 @@ void _openPopup(context) {
                               onPressed: () {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                  // return LoginScreen();
-                                  // return FirstPageTiktok();
-                                  // return const SecondPageTiktok();
-                                  return const SplashScreen();
-                                  // return const ThirstPageTiktok();
+                                  return LoginScreen();
                                 }));
                               },
                               child: Padding(
