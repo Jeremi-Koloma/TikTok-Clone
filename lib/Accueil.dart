@@ -70,7 +70,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFF141518),
+        backgroundColor: const Color(0xFF141518),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey,
         // showSelectedLabels: false,

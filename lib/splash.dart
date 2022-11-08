@@ -1,51 +1,47 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:tiktok/Accueil.dart';
 
-import 'Accueil.dart';
-
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashState extends State<Splash> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    //_navigateToHome();
-  }
 
-  _navigateToHome() async {
-    await Future.delayed(const Duration(milliseconds: 1500), () {});
-    Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (context) => MyStatefulWidget(
-                  title: 'Jeremi',
-                )));
+    Future.delayed(const Duration(seconds: 5)).then((value) {
+      Navigator.of(context).pushReplacement(CupertinoPageRoute(
+          builder: (_) => const MyStatefulWidget(
+                title: 'TikTok ODC',
+              )));
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      backgroundColor: const Color(0xFF141518),
+      body: SizedBox(
+        width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.blue,
+            Image(
+              image: AssetImage("assets/images/logoT.png"),
+              width: 300,
             ),
-            Container(
-              child: const Text(
-                'Splash Screen',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+            SizedBox(
+              height: 50,
+            ),
+            SpinKitThreeBounce(
+              color: Color.fromARGB(255, 248, 24, 80),
+              size: 50.0,
             ),
           ],
         ),

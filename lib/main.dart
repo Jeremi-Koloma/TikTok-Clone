@@ -16,18 +16,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter TikTok',
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(
-          splash: const Image(
-            image: AssetImage("assets/images/logoT.png"),
-            width: 300,
-          ),
-          duration: 3500,
-          splashTransition: SplashTransition.scaleTransition,
-          backgroundColor: const Color(0xFF141518),
-          nextScreen: const MyStatefulWidget(title: 'Jeremi')),
+      home: SplashScreen(),
     );
   }
 }
